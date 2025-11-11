@@ -1,0 +1,4 @@
+1) Download the file
+2a) make a new command prompt profile based off CMD
+2b) set the starting file to the file the PyOS file is in
+3) type: python PyOS.py
