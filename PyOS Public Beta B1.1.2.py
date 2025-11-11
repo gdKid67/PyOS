@@ -11,7 +11,7 @@ def New_Console():
     Window = tk.Toplevel()
     canvas = tk.Canvas(Window)
     canvas.pack()
-    print("Opened New Console Window with POS code 0X02")
+    print("Opened New Console Window with POS code 0S02")
 print("Opened PyOS Public beta version 1")
 root = tk.Tk()
 root.title("New Profile")
@@ -28,3 +28,4 @@ buttonC.pack()
 root.mainloop()
 
 print("Ended Process on command (POS Code 0X01)")
+
