@@ -13,5 +13,9 @@ Start.pack(fill=os.Y, side=os.LEFT)
 LogOut = os.Button(master= TB, text="Log Out", command= OS.quit)
 LogOut.pack(fill=os.Y, side=os.LEFT)
 
+PatchNotes = os.Label(master=TB, text="Version Beta2.1", bg="Black", fg="White")
+PatchNotes.pack(side=os.RIGHT)
+
 OS.attributes('-fullscreen',True)
 OS.mainloop()
+
