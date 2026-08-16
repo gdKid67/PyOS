@@ -1,0 +1,56 @@
+#START IMPORTS
+import tkinter as tk
+from tkinter import ttk
+#END IMPORTS
+
+#PRE RUN DEFINITIONS
+TK = tk.Tk()
+#TK.title('PyOS MINI') #Comment if not in mini
+TK.minsize(550, 350)
+TK.config(cursor="cross")
+Start_Menu_Vis = True
+def click_start():
+     global Start_Menu_Vis
+     if Start_Menu_Vis:
+        Start_Menu.pack_forget()
+        Start_Menu_Vis = False
+        print("5x001a")
+     else: 
+        Start_Menu_Vis = True
+        Start_Menu.pack(side=tk.BOTTOM, anchor="w")
+        print("5x001b")
+
+#OPEN CODES
+print("0x001")
+
+#RUN CODE
+User_Session = tk.Frame( master=TK, width='200', height='200', bg= 'Gray')
+User_Session.pack(fill=tk.BOTH, expand=True)
+print("0x002")
+
+#TEXT
+Release = tk.Label(master=User_Session, text="PyOS 26.PREVIEW", bg='Gray', fg='White', font=("Times", "30", "bold"))
+Release.pack()
+
+Task_Manager = tk.Frame( master = User_Session, width=200, height=50, bg='White')
+Task_Manager.pack(fill=tk.X, side=tk.BOTTOM)
+print("0x003a")
+
+Exit_Button = tk.Button(master=Task_Manager, text="Quit", command= TK.quit)
+Exit_Button.pack(fill=tk.Y, side=tk.RIGHT)
+print("0x003b")
+
+#START
+Start_Button = tk.Button(master=Task_Manager, text="Start", command= click_start)
+Start_Button.pack(fill=tk.Y, side=tk.LEFT)
+
+
+Start_Menu = tk.Frame(master = User_Session, relief=tk.RAISED, width=300, height=200, bg='White')
+Start_Menu.pack(side=tk.BOTTOM, anchor="w")
+
+#LOOP CODES
+TK.attributes('-fullscreen',True) #Comment when in mini
+TK.mainloop()
+
+#END CODES
+print("1x001")
